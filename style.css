@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 12px 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin: 6px 0 18px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover,
+nav a.active {
+    text-decoration: underline;
+}
+
+.hero {
+    padding-top: 65px;
+    padding-bottom: 55px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p,
+.section > p {
+    font-size: 18px;
+}
+
+.section {
+    padding-top: 45px;
+    padding-bottom: 55px;
+}
+
+.section h2 {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.card {
+    display: block;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #ddd;
+    color: #222;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+    border-color: #888;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 21px;
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+.card span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.button-link,
+button {
+    display: inline-block;
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-link:hover,
+button:hover {
+    background-color: #444;
+}
+
+.empty-state {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+.form-panel {
+    max-width: 760px;
+    background: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    margin-top: 25px;
+}
+
+label {
+    display: block;
+    margin: 14px 0 6px;
+    font-size: 17px;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    background-color: white;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-panel button {
+    margin-top: 18px;
+}
+
+.form-message {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.login-section {
+    min-height: 440px;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.login-container {
+    width: 400px;
+    max-width: 90%;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+}
+
+.login-container h2,
+.login-container > p {
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.login-container button {
+    width: 100%;
+    margin-top: 12px;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 12px 0;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        gap: 10px 14px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 29px;
+    }
+}
